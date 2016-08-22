@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static "images/favicon.ico"%}">
+
+    <title> {% block pagetitle %}page template (override the title) {% endblock %} </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "bootstrap/css/bootstrap.min.css"%}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{% static "assets/css/ie10-viewport-bug-workaround.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/styles.css"%}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="{% static "assets/assets/js/ie-emulation-modes-warning.js"%}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">{% block adventuretitle %}adventure title (override me){% endblock %}</h3>
+              <nav>
+              <!-- <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+              </nav>-->
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">{% block roomtitle %}(room title override me){% endblock %}</h1>
+            <p class="lead">{% block actiondescription %}(action description override me){% endblock %}</p>
+            <p class="lead">{% block roomdescription %}(room description override me){% endblock %}</p
+              <p class="lead">
+            {% if room.roomaction_set%}
+                {% for action in room.roomaction_set.all %}
+                    <a href="{% url 'afield:index' room_id=action.nextRoom previous_room_action_id=action.id%}" class="btn btn-lg btn-default">{{ action.name }}</a>
+                {% endfor %}
+            {% else %}
+                <a href="{% url 'afield:index' 2 %}">the end?</a>
+            {% endif %}
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p><a href="www.wildmonkeybytes.com">wildmonkeybytes.com</a> 2016</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js"%}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static "/assets/js/ie10-viewport-bug-workaround.js"%}"></script>
+  </body>
+</html>
