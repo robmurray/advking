@@ -1,2 +1,2 @@
 # advking
-Created a choose your own adventure framework to experimenting with Python and Django
+A first foray into the world of Python. Created a choose your own adventure style game Python, Django, postgres
