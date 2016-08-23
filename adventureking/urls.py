@@ -16,10 +16,8 @@ Including another URLconf
 
 from django.conf.urls import include, url
 from django.contrib import admin
-from adventureking import settings
 
 urlpatterns = [
     url(r'^afield/', include('afield.urls')),
     url(r'^admin/', admin.site.urls),
-    (r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 ]
