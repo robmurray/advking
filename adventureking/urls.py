@@ -16,10 +16,11 @@ Including another URLconf
 
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.http import HttpResponseRedirect
+# from django.http import HttpResponseRedirect
 
 urlpatterns = [
-    (r'^$', lambda r: HttpResponseRedirect('afield/')),
+    #(r'^$', lambda r: HttpResponseRedirect('afield/')),
+    url(r'^', include('afield.urls')),
     url(r'^afield/', include('afield.urls')),
     url(r'^admin/', admin.site.urls),
 ]
