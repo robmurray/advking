@@ -18,8 +18,6 @@ from django.conf.global_settings import DATABASES
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -27,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'mjr_-k_#wrw0@6r#i5n+2n8+^%$jenwdq1=*x56cu(qxzno9ya'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
