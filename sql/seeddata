@@ -1,0 +1,75 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.4
+-- Dumped by pg_dump version 9.5.1
+
+-- Started on 2016-08-22 20:47:52 EDT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET search_path = public, pg_catalog;
+
+--
+-- TOC entry 2428 (class 0 OID 17033)
+-- Dependencies: 201
+-- Data for Name: afield_room; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO afield_room VALUES (2, 'While you peacefully slumber the land around  you is developed,  trapping you under a parking lot for all of eternity.', '2016-08-22 12:23:22.162107-04', 'Sweet Dreams');
+INSERT INTO afield_room VALUES (1, 'You awaken in an empty field staring into the noon sun with no memory of the night before or anything else.', '2016-08-22 12:21:54.536275-04', 'A Field');
+INSERT INTO afield_room VALUES (4, 'Reiterating what was  clearly stated previously. The mountain is impassable.', '2016-08-22 12:31:10.916532-04', 'A Mountain');
+INSERT INTO afield_room VALUES (5, 'Upon entering the poisonous mist, you are surprised to find the mist is quite poisonous. leaving only one option return the field.', '2016-08-22 12:45:24.453465-04', 'Poisonous Mist');
+INSERT INTO afield_room VALUES (3, 'You can see a river to the East. An impassable mountain to the West. More field to North and a poisonous looking mist to the South.', '2016-08-22 12:25:00.587881-04', 'Standing in a Field');
+INSERT INTO afield_room VALUES (6, 'There is nothing. Perhaps the lazy room builder has not finished building this room. Head back to the field and try another path', '2016-08-22 15:24:01.320739-04', 'Emptiness');
+
+
+--
+-- TOC entry 2435 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: afield_room_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('afield_room_id_seq', 6, true);
+
+
+--
+-- TOC entry 2430 (class 0 OID 17047)
+-- Dependencies: 203
+-- Data for Name: afield_roomaction; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO afield_roomaction VALUES (3, 'Start Over', '2016-08-22 12:21:58-04', 2, 1, '');
+INSERT INTO afield_roomaction VALUES (1, 'go back to sleep', '2016-08-22 12:19:36-04', 1, 2, 'You have chosen to lay down and rest most unworthy of all adventurers.');
+INSERT INTO afield_roomaction VALUES (2, 'stand up', '2016-08-22 12:19:36-04', 1, 3, 'With great effort and a mighty grunt you struggle to your feet.');
+INSERT INTO afield_roomaction VALUES (8, 'Go Back to the Field', '2016-08-22 12:29:41-04', 4, 3, 'With great shame and embarrassment of lack of attention to detail you return to the field.');
+INSERT INTO afield_roomaction VALUES (9, 'Return to the field', '2016-08-22 12:42:46-04', 5, 3, 'You return to the field. Questioning your judgment. Entering an obviously poison mist without some sort of protective gear is not wise.');
+INSERT INTO afield_roomaction VALUES (4, 'North', '2016-08-22 12:23:25-04', 3, 4, 'You head North');
+INSERT INTO afield_roomaction VALUES (5, 'South', '2016-08-22 12:23:25-04', 3, 5, 'You head South');
+INSERT INTO afield_roomaction VALUES (6, 'West', '2016-08-22 12:23:25-04', 3, 6, 'You head West');
+INSERT INTO afield_roomaction VALUES (7, 'East', '2016-08-22 12:23:25-04', 3, 6, 'You head East');
+INSERT INTO afield_roomaction VALUES (10, 'Head Back to the Field', '2016-08-22 15:21:05-04', 6, 3, 'You quickly return back to the field without incident. Feeling good that you explored a fair section of this land.');
+
+
+--
+-- TOC entry 2436 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: afield_roomaction_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('afield_roomaction_id_seq', 10, true);
+
+
+-- Completed on 2016-08-22 20:47:52 EDT
+
+--
+-- PostgreSQL database dump complete
+--
+
