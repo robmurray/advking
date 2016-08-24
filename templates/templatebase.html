@@ -43,12 +43,12 @@
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">{% block adventuretitle %}adventure title (override me){% endblock %}</h3>
-              <nav>
+              <!--<nav>
               <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
+                  <li><a href="{% url 'afield:about' room_id=room.id%}">About</a></li>
                 </ul>
-              </nav>
+              </nav>-->
             </div>
           </div>
 

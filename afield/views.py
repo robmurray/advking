@@ -12,3 +12,9 @@ def index(request, room_id=1, previous_room_action_id=0):
 
     return render(request, 'afield/index.html', {'room': room, 'actiondescription': actiondescription})
 
+
+def about(request, room_id=1):
+    room = get_object_or_404(Room, pk=7)
+    room.roomaction_set.all()
+    actiondescription =""
+    return render(request, 'afield/index.html', {'room': room, 'actiondescription': actiondescription, 'returnroom':room_id})
