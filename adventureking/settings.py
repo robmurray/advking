@@ -83,8 +83,9 @@ WSGI_APPLICATION = 'adventureking.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+# a few possibilities listed here explicit config via dictionary, db url, environment variable
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #        'NAME': 'AdventureKing',
@@ -94,9 +95,11 @@ WSGI_APPLICATION = 'adventureking.wsgi.application'
 #        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
 #    }
 #}
+# DATABASES = {'default': dj_database_url.config(default='postgres://postgress:bar@localhost:5432/AdventureKing')}
+# DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'])}
+#DATABASES['default'] = dj_database_url.config()
 
-DATABASES['default'] = dj_database_url.config()
-
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres@localhost:5432/AdventureKing')}
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
