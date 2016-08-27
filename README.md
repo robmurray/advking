@@ -14,7 +14,7 @@ Heroku
 
 ##setup 
 
-(this are approximate instructions. If truly inteterested and having difficulties send me an email)
+(these are approximate instructions. If truly inteterested and having difficulties send me an email)
 
 * clone the repo
 * $virtualenv venv
