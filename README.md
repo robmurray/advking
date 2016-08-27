@@ -13,7 +13,9 @@ bootstrap
 Heroku
 
 ##setup 
+
 (this are approximate instructions. If truly inteterested and having difficulties send me an email)
+
 1) clone the repo
 2) $virtualenv venv
 3) $source venv/bin/activate
