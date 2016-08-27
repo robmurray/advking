@@ -12,9 +12,10 @@ bootstrap
 ## deploy environment
 Heroku
 
-
-##setup
+##setup (this are approximate instructions. If truly inteterested and having difficulties send me an email)
 1) clone the repo
 2) $virtualenv venv
 3) $source venv/bin/activate
 4) $pip3 install -r requirements.txt
+5) create the postgress DB
+6) run seed data script /sql/seeddata.sql
